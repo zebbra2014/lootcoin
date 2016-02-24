@@ -1,0 +1,9 @@
+Building LootCoin
+
+See doc/readme-qt.rst for instructions on building LootCoin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of LootCoin.
+
+See doc/build-*.txt for instructions on building lootcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of LootCoin.
