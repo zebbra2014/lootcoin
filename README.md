@@ -1,6 +1,7 @@
 LootCoin integration/staging tree
 ================================
 
+http://www.lootcoin.org
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2014 LootCoin Developers
