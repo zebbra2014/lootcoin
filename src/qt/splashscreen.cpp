@@ -14,8 +14,8 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     QSplashScreen(pixmap, f)
 {
     // set reference point, paddings
-    int paddingLeftCol2         = 230;
-    int paddingTopCol2          = 376;
+    int paddingLeftCol2         = 240;
+    int paddingTopCol2          = 386;
     int line1 = 0;
     int line2 = 13;
     int line3 = 26;
@@ -26,9 +26,9 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     QString titleText       = QString(QApplication::applicationName()).replace(QString("-testnet"), QString(""), Qt::CaseSensitive); // cut of testnet, place it as single object further down
     QString versionText     = QString("Version %1 ").arg(QString::fromStdString(FormatFullVersion()));
     QString copyrightText1   = QChar(0xA9)+QString(" 2009-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin developers"));
-    QString copyrightText2   = QChar(0xA9)+QString(" 2011-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The LootCoin developers"));
+    QString copyrightText2   = QChar(0xA9)+QString(" 2016-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The LootCoin developers"));
 
-    QString font            = "Arial";
+    QString font            = "Verdana";
 
     // load the bitmap for writing some text over it
     QPixmap newPixmap;
@@ -42,11 +42,11 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f) :
     QPainter pixPaint(&newPixmap);
     pixPaint.setPen(QColor(70,70,70));
 
-    pixPaint.setFont(QFont(font, 9*fontFactor));
+    pixPaint.setFont(QFont(font, 7*fontFactor));
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line3,versionText);
 
     // draw copyright stuff
-    pixPaint.setFont(QFont(font, 9*fontFactor));
+    pixPaint.setFont(QFont(font, 7*fontFactor));
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line1,copyrightText1);
     pixPaint.drawText(paddingLeftCol2,paddingTopCol2+line2,copyrightText2);
 
